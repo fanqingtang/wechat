@@ -1,0 +1,4 @@
+<import src="../search_page/search_page_template/search_page_template.wxml"/>
+<view class="container">
+  <template is="emptyClass" data="{{...searchEmptyObj}}"></template>  
+</view>

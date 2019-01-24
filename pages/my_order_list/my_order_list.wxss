@@ -1,0 +1,163 @@
+@import "./my_order_list_template/my_order_list_template.wxss";
+@import "../search_page/search_page_template/search_page_template.wxss";
+
+page {
+  background-color: #f3f3f3;
+}
+
+/* 全部订单/待支付/已完成 css start */
+
+.header_tab_wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 750rpx;
+  height: 80rpx;
+  padding: 0rpx 70rpx;
+  box-sizing: border-box;
+  border-top: 1rpx solid #e5e5e5;
+  border-bottom: 1rpx solid #e5e5e5;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+}
+
+.header_tab_wrapper>text {
+  font-family: "PingFang-SC";
+  font-size: 30rpx;
+  width: 120rpx;
+  height: 100%;
+  line-height: 80rpx;
+  text-align: center;
+  color: #333;
+}
+
+.active_tab {
+  border-bottom: 4rpx solid #ff7a32;
+  color: #ff7a32;
+}
+
+/* 全部订单/待支付/已完成 css end  */
+
+/* 订单列表 css start */
+
+.content_order_wrapper {
+  margin-top: 80rpx;
+}
+
+.content_wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-top: 30rpx;
+  border-top: 1rpx solid #e5e5e5;
+  border-bottom: 1rpx solid #e5e5e5;
+  background-color: #fff;
+}
+
+.content_wrapper .content_top {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 72rpx;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rpx 30rpx;
+}
+
+.content_top>text:nth-of-type(1) {
+  font-family: "SanFranciscoText";
+  font-size: 24rpx;
+  color: #999;
+}
+
+.content_top>text:nth-of-type(2) {
+  font-family: "PingFangSC";
+  font-size: 24rpx;
+  color: #ff7a32;
+}
+
+.content_wrapper .content_footer {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0rpx 30rpx;
+  height: 86rpx;
+}
+
+.content_footer>text:nth-of-type(1) {
+  font-family: "PingFang-SC";
+  font-size: 24rpx;
+  color: #999;
+  margin-right: 10rpx;
+}
+
+.content_footer>text:nth-of-type(2) {
+  font-family: "SanFranciscoText";
+  font-size: 32rpx;
+  color: #333;
+}
+
+/* 订单列表 css end */
+
+/* 待支付列表里面的 剩余时间 和 立即支付css start */
+
+.content_wrapper .wait_pay_wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 182rpx;
+  align-items: flex-end;
+  padding: 0rpx 30rpx;
+  justify-content: center;
+}
+
+.wait_pay_wrapper .money_group {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+
+.money_group>text:nth-of-type(1) {
+  font-family: "PingFang-SC";
+  font-size: 24rpx;
+  color: #999;
+  margin-right: 10rpx;
+}
+
+.money_group>text:nth-of-type(2) {
+  font-family: "SanFranciscoText";
+  font-size: 32rpx;
+  color: #333;
+}
+
+.wait_pay_wrapper .rest_time_wrapper {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.rest_time_wrapper>text:nth-of-type(1){
+  font-family: "PingFang-SC";
+  font-size:24rpx;
+  color:#FF7A32;
+  margin-right: 30rpx;
+}
+.rest_time_wrapper>text:nth-of-type(2){
+  display: inline-flex;
+  width:200rpx;
+  height: 60rpx;
+  align-items: center;
+  justify-content: center;
+  border:1rpx solid #FF7A32;
+  border-radius: 8rpx;
+  font-family: "PingFang-SC";
+  font-size:28rpx;
+  color:#FF7A32;
+}
+/* 待支付列表里面的 剩余时间 和 立即支付css end */
+
+.show_ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

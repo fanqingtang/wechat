@@ -1,0 +1,164 @@
+@import "../index/index_template/index_template.wxss";
+@import "./search_page_template/search_page_template.wxss";
+page {
+  height: 100%;
+  background-color: #f3f3f3;
+}
+
+.header_wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rpx 30rpx;
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+  box-sizing: border-box;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.search_wrapper {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: cener;
+}
+
+.search_icon {
+  width: 28rpx;
+  height: 28rpx;
+  position: absolute;
+  left: 24rpx;
+  top: 20rpx;
+  text-align: center;
+}
+
+.xImg_group {
+  display: flex;
+  width: 100rpx;
+  height: 68rpx;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0rpx;
+  top: 0rpx;
+  z-index: 10;
+}
+
+.x_img {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.search_text {
+  background-color: "#999999";
+  font-size: 28rpx;
+  font-family: "PingFang-SC";
+}
+
+.search_bg {
+  width: 586rpx;
+  height: 68rpx;
+  background-color: #eee;
+  border-radius: 34rpx;
+  padding-left: 72rpx;
+  padding-right: 100rpx;
+  box-sizing: border-box;
+}
+
+.header_wrapper > text {
+  font-family: "PingFang-SC";
+  font-weight: bold;
+  font-size: 32rpx;
+  color: #ff7a32;
+}
+
+.search_history_wrapper {
+  font-family: "PingFang-SC";
+  margin-top: 100rpx;
+  padding: 40rpx 30rpx 0rpx;
+}
+
+.search_title_group {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search_history {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.search_title_group > image {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.search_pass_list {
+  font-family: "PingFang-SC";
+  margin: 30rpx 0rpx 40rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.search_pass_list text {
+  display: inline-block;
+  min-width: 160rpx;
+  padding: 0rpx 34rpx;
+  min-height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 30rpx;
+  font-size: 28rpx;
+  color: #999;
+  margin: 10rpx;
+  box-sizing: border-box;
+}
+
+.search_content_wrapper {
+  margin-top: 132rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #e5e5e5;
+}
+
+.course_list_box {
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.separat_wrapper {
+  display: flex;
+  height:92rpx;
+  line-height: 92rpx;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0rpx 30rpx;
+  background-color: #F3F3F3;
+}
+
+.separat_line {
+  display: inline-block;
+  width: 160rpx;
+  height: 2rpx;
+  background-color: #e5e5e5;
+}
+
+.course_text {
+  font-family: "PingFang-SC";
+  font-size: 24rpx;
+  color: #999999;
+  margin: 0rpx 34rpx;
+}
+.search_show_hide {
+  display: none;
+}

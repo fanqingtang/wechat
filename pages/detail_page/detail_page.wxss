@@ -1,0 +1,146 @@
+@import "../my_order_list/my_order_list_template/my_order_list_template.wxss";
+page {
+  background-color: #f3f3f3;
+  border-top: 1rpx solid #e5e5e5;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  font-family: "Mirocsoft YaHei", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.detail_wrapper {
+  padding: 30rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-top: 1rpx solid #e5e5e5;
+  border-bottom: 1rpx solid #e5e5e5;
+  margin-top: 30rpx;
+}
+
+.order_wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.order_num_wrapper {
+  font-family: "PingFang-SC";
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+
+.order_text {
+  color: #999;
+}
+
+.order_num {
+  font-family: "SanFranciscoText";
+  color: #333;
+}
+
+.deal_success {
+  font-family: "PingFang-SC";
+  font-size: 28rpx;
+  color: #ff7a32;
+}
+
+.student_wrapper {
+  margin: 20rpx 0rpx;
+}
+
+.content_middle{
+  background-color: #fff;
+  margin-top: 30rpx;
+  border-top: 1rpx solid #e5e5e5;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+.content_middle_wrapper{
+  padding:20rpx 0rpx;
+}
+.course_amount_wrapper {
+  margin-top:30rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #e5e5e5;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+.course_amount_group{
+  padding: 30rpx;
+}
+.detail_order_wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 40rpx;
+  margin-bottom: 20rpx;
+}
+
+.detail_amount {
+  font-family: "PingFang-SC";
+  font-size: 28rpx;
+  color: #999;
+}
+
+.detail_price {
+  font-family: "SanFranciscoText";
+  font-size: 28rpx;
+  color: #333;
+}
+
+.detail_all_wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  line-height:40rpx;
+  padding: 30rpx;
+  border-top: 1rpx solid #e5e5e5;
+}
+.last_detail_order{
+  margin-bottom: 0rpx;
+}
+
+.detail_all_price {
+  font-family: "SanFranciscoText";
+  font-size: 32rpx;
+  color: #ff7a32;
+}
+
+.pay_wrapper{
+  display: inline-flex;
+  flex-flow: row nowrap;
+  width:750rpx;
+  height: 100rpx;
+  padding: 0rpx 30rpx;
+  box-sizing:border-box;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #FFFFFF;
+  position: fixed;
+  bottom: 0;
+}
+.pay_wrapper>text{
+  font-family: "PingFang-SC";
+  font-size: 28rpx;
+  color:#666666;
+  width:200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border:1rpx solid #999999;
+  border-radius: 8rpx;
+  text-align: center;
+}
+.pay_wrapper>text:nth-of-type(2){
+  margin-left:30rpx;
+}
+.pay_wrapper>text.pay_active{
+  border:1rpx solid #FF7A32;
+  color:#FF7A32;
+}

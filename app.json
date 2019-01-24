@@ -1,0 +1,53 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/my_page/my_page",
+    "pages/detail_page/detail_page",
+    "pages/search_page/search_page",
+    "pages/get_phone_number/get_phone_number",
+    "pages/course_detail_page/course_detail_page",
+    "pages/report_page/report_page",
+    "pages/course_more_detail/course_more_detail",
+    "pages/course_syllabus/course_syllabus",
+    "pages/login_page/login_page",
+    "pages/register_page/register_page",
+    "pages/perfect_page/perfect_page",
+    "pages/select_school_page/select_school_page",
+    "pages/course_list_page/course_list_page",
+    "pages/my_order_list/my_order_list",
+    "pages/submit_order_page/submit_order_page",
+    "pages/developing_page/developing_page",
+    "pages/banner_detail/banner_detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "乐学一百",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "color":"#CCCCCC",
+    "selectedColor":"#FF7A32",
+    "backgroundColor":"#FFFFFF",
+    "list":[{
+      "pagePath":"pages/index/index",
+      "text":"首页",
+      "iconPath":"images/index/home_gray.png",
+      "selectedIconPath":"images/index/home.png"
+    },
+    {
+      "pagePath":"pages/my_page/my_page",
+      "text":"我的",
+      "iconPath":"images/index/my_gray.png",
+      "selectedIconPath": "images/index/my.png"
+    }
+    ]
+  },
+  "networkTimeout":{
+    "request":20000,
+    "connectSocket":2000,
+    "uploadFile":2000,
+    "downloadFile":2000
+  },
+  "debug":true
+}

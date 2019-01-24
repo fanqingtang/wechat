@@ -1,0 +1,35 @@
+
+<import src="../index/index_template/index_template.wxml" />
+<view class="container">
+  <view class="header_tab_wrapper">
+    <block wx:for="{{courseTabArray}}" wx:key="{{index}}">
+      <text class="{{type==index?'active_tab':''}}" data-id="{{index}}" bindtap="onBindCourse">{{item}}</text>
+    </block>
+  </view>
+  <view class="content_wrapper">
+    <scroll-view scroll-y="{{true}}" scroll-with-animation= "{{true}}" style="height:100%;" scroll-into-view="{{scrollP}}">
+      <view id="gongkai">
+        <block wx:for="{{gongkai}}" wx:for-item="item" wx:key="idx">
+          <view catchtap='getDetailPage' data-id="{{item.gid}}" data-type="{{item.type}}" class="course_list_box">
+            <template is="courseList" data="{{...item}}"></template>
+          </view>
+        </block>
+      </view>
+      <view id="zhibo">
+        <block wx:for="{{zhibo}}" wx:for-item="item" wx:key="idx">
+          <view catchtap='getDetailPage' data-id="{{item.gid}}" data-type="{{item.type}}" class="course_list_box">
+            <template is="courseList" data="{{...item}}"></template>
+          </view>
+        </block>
+      </view>
+
+      <view id="zizhu">
+        <block wx:for="{{zizhu}}" wx:for-item="item" wx:key="idx">
+          <view catchtap='getDetailPage' data-id="{{item.gid}}" data-type="{{item.type}}" class="course_list_box">
+            <template is="courseList" data="{{...item}}"></template>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+  </view>
+</view>

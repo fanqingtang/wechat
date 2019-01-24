@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="getPhoneNum_wrapper">
+  
+    <view class="tip_group">
+      <text class="tip_text {{code?'tip_hide':''}}">{{tip}}</text>
+    </view>
+    <view class="getPhoneNum_group">
+      <input class="phoneNum" type="number" placeholder='手机号' bindinput='onBindPhone'></input>
+      <button class="codeNum" size="mini" type="default" plain='true' hover-class="none" disabled="{{disabled}}" bindtap='onPhoneCode'>{{getCodeText}}</button>
+    </view>
+    <input class="getCode" type="number" placeholder='输入手机收到的验证码' bindinput='onBindCode'></input>
+    <view class="getCode">
+      <input class="passWord" type="text" placeholder='密码：6-18个字符' bindinput='onBindPassWord'></input>
+    </view>
+  </view>
+  <button class="next_step" type="default" size="default" bindtap='onBindNextStep'>下一步</button>
+  <view class="concat_wrapper">
+      <text>如有问题,请联系客服老师</text>
+      <text class="seatPhone">400-670-7210</text>
+  </view>
+</view>

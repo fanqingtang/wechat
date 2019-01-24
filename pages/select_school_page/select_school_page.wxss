@@ -1,0 +1,109 @@
+.write_school_info {
+  display: flex;
+  flex-flow: column nowrap;
+  box-sizing: border-box;
+  font-family: "Mirocsoft YaHei", Arial, Helvetica, sans-serif;
+  border-top: 1px solid #e5e5e5;
+  padding: 20rpx 30rpx;
+}
+
+.province_wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.province {
+  display: flex;
+  width: 204rpx;
+  height: 80rpx;
+  border: 1px solid #bbb;
+  border-radius: 10rpx;
+  padding: 0rpx 15rpx;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.down_img {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.school_search_wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.search_group {
+  width: 450rpx;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.search_group > input {
+  width: 330rpx;
+  height: 80rpx;
+  border: 1px solid #bbb;
+  border-radius: 10rpx 0 0 10rpx;
+  padding: 0rpx 15rpx;
+  box-sizing: border-box;
+  border-right: none;
+}
+.search_group > text{
+  font-size: 28rpx;
+}
+.search {
+  font-size: 28rpx;
+}
+
+.search_group > text {
+  width: 120rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background-color: #ff7a32;
+  border-radius: 0 10rpx 10rpx 0;
+}
+
+.school_name_wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-top: 40rpx;
+}
+
+.school_name_wrapper text {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  color: #666;
+  padding: 20rpx 30rpx;
+  border-top: 1px solid #e5e5e5;
+}
+.school_name_wrapper text:last-child{
+  border-bottom: 1px solid #e5e5e5;
+}
+.search_null_wrapper{
+  display: flex;
+  flex-flow:column nowrap;
+  align-items: center;
+  justify-content:center;
+  margin-top:200rpx;
+}
+.search_null_wrapper > image{
+  width:160rpx;
+  height: 136rpx;
+}
+
+.search_null_wrapper > text{
+  font-family: "MicrosoftYaHei";
+  font-size: 28rpx;
+  color:#999999;
+  margin-top: 38rpx;
+}

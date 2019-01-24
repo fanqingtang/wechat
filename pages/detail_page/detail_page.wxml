@@ -1,0 +1,59 @@
+<import src="./detail_page_template/detail_page_template.wxml" />
+<view class="container">
+  <view class="detail_wrapper">
+    <view class="order_wrapper">
+      <view class="order_num_wrapper">
+        <text class="order_text">订单号：</text>
+        <text class="order_num">{{detailData.order_number}}</text>
+      </view>
+      <text class="deal_success">{{detailData.order_status}}</text>
+    </view>
+    <view class="order_num_wrapper student_wrapper">
+      <text class="order_text">学员信息：</text>
+      <text class="order_num">{{detailData.student_name}} </text>
+      <text class="order_num">{{detailData.student_phone}}</text>
+    </view>
+    <view class="order_num_wrapper">
+      <text class="order_text">下单时间：</text>
+      <text class="order_num">{{detailData.order_time}}</text>
+    </view>
+  </view>
+  <view class="content_middle">
+    <view wx:for="{{detailData.course_info}}" wx:key="{{index}}" class="content_middle_wrapper">
+      <template is="orderList" data="{{courseList:item}}"></template>
+    </view>
+  </view>
+  <view class="course_amount_wrapper">
+    <view class="course_amount_group">
+      <view class="detail_order_wrapper">
+        <text class="detail_amount">订单总金额</text>
+        <text class="detail_price">{{"¥"+ detailData.order_price}}</text>
+      </view>
+      <view class="detail_order_wrapper">
+        <text class="detail_amount">优惠券折扣</text>
+        <text class="detail_price">{{"-¥"+ detailData.order_coupon}}</text>
+      </view>
+      <view class="detail_order_wrapper">
+        <text class="detail_amount">优惠金额（使用满减优惠券）</text>
+        <text class="detail_price">{{"-¥"+ detailData.order_discount}}</text>
+      </view>
+      <view class="detail_order_wrapper last_detail_order">
+        <text class="detail_amount">合计</text>
+        <text class="detail_price">{{"¥"+ detailData.order_total}}</text>
+      </view>
+    </view>
+
+    <view class="detail_all_wrapper">
+      <text class="detail_amount">总额</text>
+      <text class="detail_all_price">{{"¥"+ detailData.order_total}}</text>
+    </view>
+  </view>
+
+  <!-- 待支付订单详情页 会显示 取消订单 和 立即支付按钮 -->
+
+  <view class="pay_wrapper" wx:if="{{detailData.order_status == '待支付'}}">
+    <block wx:for="{{btnArray}}" wx:key="index">
+      <text data-id="{{index}}" bindtap="onCancelOrPay" class="{{index==btnActive?'pay_active':''}}">{{item}}</text>
+    </block>
+  </view>
+</view>

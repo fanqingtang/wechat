@@ -1,0 +1,511 @@
+page {
+  height: 100%;
+  background: #f3f3f3;
+  border-top: 1rpx solid #e5e5e5;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  font-family: "Mirocsoft YaHei", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.header_wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 30rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.header_title {
+  font-family: "PingFang-SC";
+  font-size: 38rpx;
+  color: #333;
+  line-height: 52rpx;
+}
+
+.header_time_wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-family: "PingFang-SC";
+  margin: 10rpx 0rpx;
+}
+
+.header_time_wrapper text {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.header_people_wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  font-family: "PingFang-SC";
+}
+
+.report_people {
+  font-size: 28rpx;
+  color: #FF7A32;
+}
+
+.teacher_info_wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 30rpx;
+  height: 160rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  position: relative;
+  border-bottom: 1rpx solid #e5e5e5;
+  border-top:1rpx solid #e5e5e5;
+}
+.auto_info_wrapper{
+  height: 100rpx;
+}
+.teacher_img {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}
+.public_free_course{
+  width:100%;
+}
+.teacher_info_group {
+  display: flex;
+  width: 100%;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.teacher_group {
+  display: flex;
+  flex-flow: row nowrap;
+  font-family: "PingFang-SC";
+  font-size: 28rpx;
+  color: #333;
+  line-height: 42rpx;
+}
+
+.teacher_lecture_group {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.restNumber {
+  display: flex;
+  align-items: flex-end;
+  font-family: "PingFang-SC";
+  font-size: 28rpx;
+  color: #ff7a32;
+  height: 105rpx;
+}
+.teacher_name{
+  color:#333333;
+}
+.teacher_text {
+  color: #999999;
+  margin-top: 18rpx;
+}
+
+.evaluate_group {
+  line-height: 42rpx;
+  color: #999;
+}
+
+.footer_report_wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  width:750rpx;
+  height: 100rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #ddd;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+
+.listen_group {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width:176rpx;
+  height: 100%;
+  justify-content: center;
+}
+
+.listen_img {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 14rpx;
+}
+
+.listen_text {
+  font-family: "PingFang-SC";
+  font-size: 26rpx;
+  color: #444444;
+}
+
+.report_group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 575rpx;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 178, 97, 1), rgba(255, 122, 50, 1));
+}
+
+.report_price {
+  font-family: "SanFranciscoText";
+  font-size: 48rpx;
+  color: #fff;
+  margin-right: 10rpx;
+}
+
+.fast_report {
+  font-family: "PingFang-SC";
+  font-size: 32rpx;
+  color: #fff;
+}
+
+.hide_custom {
+  position: absolute;
+  width: 176rpx;
+  height: 100rpx;
+  opacity: 0;
+}
+
+/*tab切换详情css start  */
+
+.detail_content_wrapper {
+  margin-bottom: 100rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.tab_group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  font-family: "PingFang-SC";
+  height: 80rpx;
+  line-height: 78rpx;
+  box-sizing: border-box;
+  background-color: ：#FFFFFF;
+  width: 100%;
+  border-bottom: 1rpx solid #e5e5e5;
+  border-top:1rpx solid #e5e5e5;
+}
+
+.tab_group text {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.tab_group .tab_active {
+  color: #ff7a32;
+  border-bottom: 4rpx solid #ff7a32;
+}
+
+.tab_detail_wrapepr {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 0rpx 30rpx;
+}
+
+.tab_detail_group {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  font-family: "PingFang-SC";
+}
+.course_detail_title{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 40rpx;
+  padding: 60rpx 0rpx 40rpx;
+  color: #333;
+  margin-top:80rpx;
+}
+
+.tab_title {
+  font-weight: bold;
+  font-size: 40rpx;
+  padding: 60rpx 0rpx 40rpx;
+  color: #333;
+}
+.tab_title_margin{
+  margin-top: 80rpx;
+}
+.tab_content_group {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-top: 40rpx;
+}
+
+.tab_min_title {
+  font-weight: bold;
+  font-size: 30rpx;
+  color: #333;
+  margin-bottom: 48rpx;
+}
+.more_group{
+  margin-top: 30rpx;
+  text-align: center;
+}
+.more_group > text{
+  font-family: "PingFang-SC";
+  font-size:28rpx;
+  display: inline-flex;
+  width:320rpx;
+  height: 60rpx;
+  align-items: center;
+  justify-content: center;
+  border:1rpx solid #FF7A32;
+  border-radius: 8rpx;
+  background-color: #FFE2D3;
+  color:#FF7A32;
+}
+.tab_detail_content{
+  font-family: "PingFang-SC";
+  font-size: 26rpx;
+  color:#666666;
+  line-height: 48rpx;
+  padding-top: 20rpx;
+  text-align: justify;
+}
+.course_program_table {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-top: 40rpx;
+  width: 690rpx;
+  border: 1rpx solid #e5e5e5;
+}
+
+.table_header, .table_body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border-bottom: 1rpx solid #e5e5e5;
+  align-items: center;
+  padding: 20rpx 10rpx;
+}
+.table_body:last-child{
+  border-bottom: none;
+}
+.table_header > text {
+  display: inline-block;
+  font-family: "PingFang-SC-Heavy";
+  font-size: 28rpx;
+  color: #999;
+  letter-spacing: 2rpx;
+  width: 226rpx;
+  text-align: center;
+}
+.table_body:nth-child(even){
+  background-color: #F8F8F8;
+}
+
+.table_body > text {
+  display: inline-block;
+  font-family: "PingFang-SC-Heavy";
+  font-size: 28rpx;
+  color: #333;
+  width: 226rpx;
+  text-align: center;
+}
+
+.last_table_body {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.table_bg {
+  background-color: #f8f8f8;
+}
+.tab_know_text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-bottom: 48rpx;
+}
+
+.tab_know_text > text {
+  font-size: 26rpx;
+  color: #666;
+  line-height: 48rpx;
+}
+
+.show_detail_wrapper {
+  width: 690rpx;
+  height: 540rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 16rpx;
+  box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.2);
+  transform-origin: 0 0;
+  transition: all 0.2s ease-out;
+}
+
+
+.show_teacher_top {
+  position: absolute;
+  top: 165rpx;
+  z-index: 3;
+}
+
+.show_detail_Top::after {
+  content: "";
+  border-width: 20rpx;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+  position: absolute;
+  top: -34rpx;
+  right: 40rpx;
+}
+
+.show_teacher_top::after {
+  content: "";
+  border-width: 20rpx;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+  position: absolute;
+  top: -34rpx;
+  left: 30rpx;
+}
+
+
+.show_text_group {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width:690rpx;
+  overflow:scroll;
+}
+.show_text_group > image{
+  width:650rpx;
+  height: 420rpx;
+  padding:20rpx;
+}
+
+.hide_detail_wrapper {
+  height: 80rpx;
+  width: 100%;
+  line-height: 78rpx;
+  text-align: center;
+  border-top: 1rpx solid #e5e5e5;
+  background-color: #fff;
+  border-radius: 0 0 16rpx 16rpx;
+}
+
+.hide_detail_wrapper > text {
+  font-size: 28rpx;
+  color: #aaa;
+}
+
+/* 自主课不同部分的css */
+.own_course_wrapper{
+  display: flex;
+  flex-flow: column nowrap;
+}
+.own_money{
+  font-family: "PingFang-SC";
+  font-size: 40rpx;
+  color:#FF7A32;
+  margin-top: 30rpx;
+}
+.course_type_group{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items:center;
+  margin:20rpx 0rpx;
+}
+.select_type{
+  font-family: "PingFang-SC";
+  font-size:28rpx;
+  color:#999999;
+}
+.semester_group{
+  display: flex;
+  width: 550rpx;
+  flex-flow: row wrap;
+}
+.semester_group > text{
+  font-family: "PingFang-SC";
+  font-size: 28rpx;
+  color:#666666;
+  min-width: 160rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border:1rpx solid #999999;
+  border-radius: 8rpx;
+  text-align: center;
+  margin:5rpx;
+}
+.semester_group .type_active{
+  color:#FF7A32;
+  border:1rpx solid #FF7A32;
+}
+.teacher_version_wrapper{
+  width:100%;
+}
+.teacher_version_group{
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "PingFangSC";
+  font-size: 32rpx;
+}
+.teacher_version{
+  color:#333333;
+}
+.select_version{
+  color:#FF7A32;
+}
+.version_wrapper{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.version_more{
+  width:32rpx;
+  height: 32rpx;
+}
+.loading_hide{
+  display: none;
+}
+.report_full{
+  color:#FF7A32;
+}
+.report_bg{
+  background: #999999;
+}

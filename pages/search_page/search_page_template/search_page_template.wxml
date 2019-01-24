@@ -1,0 +1,6 @@
+<template name="emptyClass">
+  <view class="search_null_wrapper">
+    <image src="{{img}}" class="{{imgClass?'warnImg':''}}"></image>
+    <text>{{text}}</text>
+  </view>
+</template>

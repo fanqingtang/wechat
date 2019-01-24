@@ -1,0 +1,49 @@
+.container{
+  display: flex;
+  flex-direction:column;
+  flex-wrap:nowrap;
+  font-family: "Mirocsoft YaHei", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin:200rpx 0rpx 492rpx;
+}
+.header_wrapper{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items:center;
+}
+.header_img{
+  display: flex;
+  flex-direction:row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.wechat_img{
+  width:120rpx;
+  height: 120rpx;
+}
+.arrow_img{
+  width:40rpx;
+  height: 40rpx;
+  margin:0rpx 40rpx;
+}
+
+.container button{
+  font-family: "PingFangSC";
+  font-size: 34rpx;
+  color:#FFFFFF;
+  width:670rpx;
+  height: 92rpx;
+  line-height: 90rpx;
+  text-align: center;
+  border-radius: 16rpx;
+  margin-top: 180rpx;
+  background-color: #FF7A32;
+}
+.container .account_login{
+  font-family: "PingFang-SC";
+  font-size:32rpx;
+  color:#FF7A32;
+  text-align: center;
+  margin-top: 490rpx;
+}

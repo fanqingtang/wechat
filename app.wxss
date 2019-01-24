@@ -1,0 +1,8 @@
+/*公共的头部css  */
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  font-family: "Mirocsoft YaHei", Arial, Helvetica, sans-serif;
+}

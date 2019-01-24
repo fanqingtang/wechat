@@ -1,0 +1,9 @@
+<template name="orderList">
+  <view class="middle_group">
+    <image src="{{courseList.imgUrl}}"></image>
+    <view class="middle_title_group">
+      <text class="show_ellipsis">{{courseList.title}}</text>
+      <text class="show_ellipsis">{{courseList.bversion}} {{courseList.gitem}}</text>
+    </view>
+  </view>
+</template>

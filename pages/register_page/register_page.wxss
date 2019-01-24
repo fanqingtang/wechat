@@ -1,0 +1,94 @@
+page {
+  height: 100%;
+  background-color: #f3f3f3;
+  border-top: 1px solid #e5e5e5;
+}
+
+.getPhoneNum_wrapper {
+  margin-top: 80rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.getPhoneNum_group {
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: #fff;
+  height: 120rpx;
+  align-items: center;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0 40rpx;
+}
+
+.phoneNum {
+  height: 100%;
+  width: 550rpx;
+}
+
+.getPhoneNum_wrapper button.codeNum {
+  font-family: "PingFang-SC";
+  width: 335rpx;
+  height: 100%;
+  line-height: 120rpx;
+  font-size: 32rpx;
+  color: #ff7a32;
+  padding: 0;
+  margin: 0;
+  background-color: none;
+  border: none;
+}
+
+.getCode {
+  height: 120rpx;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0 40rpx;
+}
+
+.passWord {
+  height: 100%;
+  line-height: 120rpx;
+}
+
+.container .next_step {
+  font-family: "PingFangSC";
+  font-size: 34rpx;
+  color: #fff;
+  width: 670rpx;
+  height: 92rpx;
+  margin-top: 62rpx;
+  background-color: #ff7a32;
+  border: none;
+  border-radius: 16rpx;
+}
+
+.concat_wrapper {
+  font-family: "PingFangSC";
+  font-size: 34rpx;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-top: 440rpx;
+  color: #999;
+}
+
+.seatPhone {
+  color: #ff7a32;
+  margin-top: 10rpx;
+}
+
+.tip_group {
+  font-family: "PingFangSC";
+  font-size: 24rpx;
+  padding: 0 40rpx;
+  margin-bottom: 20rpx;
+}
+
+.tip_text {
+  color: red;
+}
+
+.tip_hide {
+  display: none;
+}

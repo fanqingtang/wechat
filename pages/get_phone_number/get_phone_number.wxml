@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="header_wrapper">
+    <view class="header_img">
+      <image class="wechat_img" src="/images/get_phone_number/wechat.png"></image>
+      <image class="arrow_img" src="/images/get_phone_number/concat_arrow.png"></image>
+      <image class="wechat_img" src="/images/get_phone_number/lexue.png"></image>
+    </view>
+  </view>
+  <button bindgetphonenumber='getPhoneNumber' type="default" size="default" open-type='getPhoneNumber'>使用手机号码直接登录</button>
+  <text class="account_login" catchtap='direct_login'>账户登录</text>
+</view>

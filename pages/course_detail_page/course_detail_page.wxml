@@ -1,0 +1,158 @@
+<scroll-view class="{{loadingHide?'loading_hide':''}}" style="width:100%;height: 100%;" scroll-y="{{true}}" fixed="{{true}}" scroll-with-animation="true" scroll-into-view="{{scrollEle}}" bindscroll="scrollTopFun">
+  <view class="container">
+    <view class="header_wrapper">
+      <text class="header_title">{{courseDetailData.title}}</text>
+      <!--自主课显示部分 -->
+      <view wx:if="{{types=='zizhu'}}" class="own_course_wrapper">
+        <text class="own_money">¥{{coursePrice}}</text>
+        <view class="course_type_group">
+          <text class="select_type">选择类型：</text>
+          <view class="semester_group">
+            <block wx:for="{{semester}}" wx:item="{{item}}" wx:index="{{index}}" wx:key="index">
+              <text class="{{ownSemester == index ?'type_active':''}}" catchtap='onSemesterTap' data-index="{{index}}" data-id="{{item.cgid}}">{{item.name}}</text>
+            </block>
+          </view>
+        </view>
+        <text class="select_type">学习时长：{{duration}}天（自购买完成时间起）</text>
+      </view>
+      <view wx:else class="course_time_people">
+        <view class="header_time_wrapper">
+          <text>上课时间：</text>
+          <text wx:if="{{types == 'zhibo'}}">{{courseDetailData.stime}}至{{courseDetailData.etime}}</text>
+          <text wx:if="{{types == 'gongkai'}}">{{courseDetailData.status}}</text>
+        </view>
+        <view class="header_people_wrapper">
+          <text wx:if="{{types == 'zhibo'}}" class="report_people">{{(courseDetailData.gsnum-courseDetailData.bmnum) > 10?'热报中':'剩余'+(courseDetailData.gsnum-courseDetailData.bmnum)+'个名额'}}</text>
+          <text wx:if="{{types == 'gongkai'}}" class="report_people">{{courseDetailData.surquota > 10?'热报中':'剩余'+courseDetailData.surquota+'个名额'}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="teacher_info_wrapper {{types=='zizhu'?'auto_info_wrapper':''}}">
+      <!--自主课显示部分  -->
+      <picker wx:if="{{types=='zizhu'}}" bindchange="bindPickerChange" value="{{versionStart}}" range="{{version}}" class="teacher_version_wrapper">
+        <view class="teacher_version_group">
+          <text class="teacher_version">教材版本</text>
+          <view class="version_wrapper">
+            <text class="select_version">{{version[versionStart]}}</text>
+            <image mode="aspectFit" class="version_more" src="/images/course_detail_page/more.png"></image>
+          </view>
+        </view>
+      </picker>
+      <view wx:else class="public_free_course">
+        <view class="teacher_info_group">
+          <view class="teacher_group">
+            <image mode="aspectFit" wx:if="{{types == 'zhibo'}}" class="teacher_img" src="{{courseDetailData.teaimg}}" catchtap='onShowTeacherDetail'></image>
+            <image mode="aspectFit" wx:if="{{types == 'gongkai'}}" class="teacher_img" src="{{courseDetailData.tchimg}}" catchtap='onShowTeacherDetail'></image>
+            <view class="teacher_lecture_group">
+              <text wx:if="{{types == 'zhibo'}}" class="teacher_name">{{courseDetailData.teaname}}</text>
+              <text wx:if="{{types == 'gongkai'}}" class="teacher_name">{{courseDetailData.tchname}}</text>
+              <text class="teacher_text">主讲教师</text>
+            </view>
+          </view>
+          <view wx:if="{{types == 'zhibo'}}" class="restNumber">
+            已报名：<text class="{{courseDetailData.bmnum<10?'report_full':''}}">{{courseDetailData.bmnum < 10?'即将报满':courseDetailData.bmnum+'人'}}</text>  
+          </view>
+          <view wx:if="{{types == 'gongkai'}}" class="restNumber">
+            已报名：<text class="{{courseDetailData.bmnum<10?'report_full':''}}">{{courseDetailData.bmnum < 10?'即将报满':courseDetailData.bmnum+'人'}}</text>
+          </view>
+        </view>
+        <view class="show_detail_wrapper show_teacher_top" style="opacity:{{teacherDetail}};transform:scale({{teacherDetail}});z-index:{{zIndex}}">
+          <view class="show_text_group">
+            <image mode="aspectFit" src="{{teacherImgInfo}}"></image>
+          </view>
+          <view class="hide_detail_wrapper" catchtap='onHideTeacherDetail'>
+            <text>收起</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="detail_content_wrapper">
+      <view class="tab_group" style="position:{{positions}};top:0;background:#FFFFFF;z-index:4;" catchtap='onTabChange'>
+        <text class="{{numIndex == 0?'tab_active':''}}" data-id="0">课程详情</text>
+        <text wx:if="{{types!=='gongkai'}}" class="{{numIndex == 1?'tab_active':''}}" data-id="1">课程大纲</text>
+        <text class="{{numIndex == 2?'tab_active':''}}" data-id="2">上课须知</text>
+      </view>
+      <view class="tab_detail_wrapepr">
+        <view class="tab_detail_group" id="tab_course_detail">
+          <view class="course_detail_title">
+            <text>课程详情</text>
+          </view>
+          <!-- 直播课介绍 -->
+          <view wx:if="{{types == 'zhibo'}}" class="tab_detail_content">
+            直播课是乐学一百同步课程的重要补充，直播课的老师是乐学一百精心挑选的顶级讲师。可以在乐学一百的网站首页报名、官网乐学一百App报名、乐学一百小程序中报名，可以随时观看视频回放。关注微信群内消息，老师会在课后第二天在群内发布课程回放和笔记。
+          </view>
+          <!-- 公开课介绍 -->
+          <view wx:if="{{types == 'gongkai'}}" class="tab_detail_content">
+            公开课是乐学一百免费的课程，可以在乐学一百的网站首页报名、官网乐学一百App报名、乐学一百小程序中报名，可以随时观看视频回放。关注微信群内消息，老师会在课后第二天在群内发布课程回放和笔记。
+          </view>
+          <!-- 自主课介绍 -->
+          <view wx:if="{{types == 'zizhu'}}" class="tab_detail_content">
+            乐学一百自主课程是知识体系加以精细切分为一个个学习单元，按照知识点之间自然逻辑顺序，考试考察的能力以及学生认知规律，按照一定先后顺序编排，学生一个个单元闯关学习，前一个单元达到规定的过关分数后，才能进入下一个单元的学习，以此类推，直到所有单元通关。
+          </view>
+          <view class="more_group">
+            <text catchtap='onWatchMore'>查看课程介绍</text>
+          </view>
+        </view>
+        <view wx:if="{{types=='zhibo'}}" class="tab_detail_group" id="tab_course_program">
+          <text class="tab_title {{courseKnowMargin?'tab_title_margin':''}}">课程大纲</text>
+          <view class="course_program_table">
+            <view class="table_header">
+              <text>课名</text>
+              <text>开始时间</text>
+              <text>状态</text>
+            </view>
+            <block wx:for="{{courseTable}}" wx:item="item" wx:index="index" wx:key="index">
+              <view class="table_body">
+                <text>{{item.lt_title}}</text>
+                <text>{{item.lt_stime}}</text>
+                <text>{{item.lt_etime == 1 ?"已结束":"未开始"}}</text>
+              </view>
+            </block>
+          </view>
+        </view>
+        <view class="tab_detail_group" id="tab_course_know">
+          <text class="tab_title {{courseKnowMargin?'tab_title_margin':''}}">上课须知</text>
+          <view class="tab_content_group">
+            <text class="tab_min_title">查询已购买的课程</text>
+            <view class="tab_know_text">
+              <text wx:if="{{types !='gongkai'}}">1.pc官网：在“右上角个人头像”-“我的课程”中查询课程</text>
+              <text wx:if="{{types == 'gongkai'}}">1.pc官网：在“学习专区”-“活动”中查询课程</text>
+              <text wx:if="{{types == 'zizhu'}}">2.手机app：在“学习”-“自主课”中查询课程</text>
+              <text wx:if="{{types == 'zhibo'}}">2.手机app：在“学习”-“直播课”中查询课程</text>
+              <text wx:if="{{types == 'gongkai'}}">2.手机app：在“学习”-“公开课”中查询课程</text>
+              <text wx:if="{{types !='gongkai'}}">3.小程序：在“我的”-“我的订单”中查询课程</text>
+            </view>
+            <text class="tab_min_title">如何上课学习</text>
+            <view class="tab_know_text">
+              <text>1.在电脑联网的情况下，只需通过浏览器（搜狗浏览器、谷歌浏览器等），登录乐学一百官网即可学习</text>
+              <text>2.平板电脑和智能手机，可直接在软件商店搜索并下载“乐学一百”App，登录账号即可学习</text>
+              <text wx:if="{{types != 'zizhu'}}">3. 如果错过课程，不要着急，进入课程详情，课程回放视频支持高清、无限次播放</text>
+            </view>
+            <text class="tab_min_title">人工服务</text>
+            <view class="tab_know_text">
+              <text>客服电话：400-670-7210（周一到周日  09:00-21:00）</text>
+              <text>咨询微信：15010005044（乐学一百小依老师）{{types != 'zizhu'?' lexue100xiaoshu（乐学一百小舒老师）':''}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</scroll-view>
+<view class="footer_report_wrapper {{loadingHide?'loading_hide':''}}">
+  <view class="listen_group">
+    <image class="listen_img" src="/images/course_detail_page/customer.png"></image>
+    <text class="listen_text">客服</text>
+    <button open-type='contact' size="mini" class="hide_custom"></button>
+  </view>
+  <view  wx:if="{{courseDetailData.isbm}}" class="report_group report_bg">
+    <text class="fast_report">你已经报名 前往APP上课</text>
+  </view>
+
+  <view wx:else class="report_group" catchtap='onReportTap'>
+    <text class="report_price">¥{{coursePrice?coursePrice:0}}</text>
+    <text class="fast_report">立即报名</text>
+  </view>
+</view>

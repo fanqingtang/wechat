@@ -1,0 +1,115 @@
+.course_list_wrapper{
+  display: flex;
+  flex-direction:row;
+  flex-wrap:nowrap;
+  padding: 28rpx 30rpx 18rpx;
+  box-sizing:border-box;
+  font-family: "PingFang-SC";
+}
+.course_teacher{
+  display: flex;
+  flex-direction:column;
+  flex-wrap:nowrap;
+  align-items: center;
+  font-size:22rpx;
+  margin-right: 30rpx;
+}
+.course_teacher image{
+  width:100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.course_teacher text{
+  color:#333333;
+  margin-top: 8rpx;
+}
+.course_box{
+  height: 36rpx;
+}
+.course_info{
+  display: flex;
+  flex-direction:column;
+  flex-wrap:nowrap;
+  font-size: 30rpx;
+  width:558rpx;
+  line-height: 54rpx;
+}
+.show_ellipsis{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.course_info > text{
+  width: 558rpx;
+  color:#222222;
+  font-weight: bold;
+}
+.course_time{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: space-between;
+  font-size:22rpx;
+  color:#999999;
+  line-height: 32rpx;
+  margin: 6rpx 0rpx;
+}
+.course_time > text{
+  width:350rpx;
+  height: 32rpx;
+  letter-spacing: 1rpx;
+}
+
+.course_english{
+  display: inline-block;
+  width:80rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  font-size:24rpx;
+  text-align: center;
+  border:1px solid #70A636;
+  border-radius: 6rpx;
+  color:#70A636;
+  margin-right: 10rpx;
+}
+.course_direct{
+  width: 104rpx;
+  border:1px solid #FF7A32;
+  color:#FF7A32;
+   margin-right: 0rpx;
+}
+.course_evaluate{
+  display: flex;
+  flex-direction:row;
+  flex-wrap: nowrap;
+  align-items:center;
+  justify-content:space-between;
+  box-sizing:border-box;
+  font-size: 22rpx;
+  letter-spacing: 1rpx;
+}
+.evaluate_wrapper{
+  width:450rpx;
+  color:#999999;
+}
+.evaluate_line{
+  padding-left: 5rpx;
+}
+.course_money{
+  font-size: 26rpx;
+  font-weight: bold;
+  color:#FF7A32;
+}
+
+.direct_c{
+  color:#3FADD3;
+  border:1rpx solid #3FADD3;
+}
+.public_c{
+  color:#FF6147;
+  border:1rpx solid #FF6147;
+}
+.auto_c{
+  color:#FFA900;
+  border:1rpx solid #FFA900;
+}

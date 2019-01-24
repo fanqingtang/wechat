@@ -1,0 +1,46 @@
+<import src="./my_order_list_template/my_order_list_template.wxml" />
+<import src="../search_page/search_page_template/search_page_template.wxml" />
+<view class="container">
+  <view class="header_tab_wrapper">
+    <block wx:for="{{orderTabArray}}" wx:key="{{index}}">
+      <text class="{{tabActive == index?'active_tab':''}}" data-odstatus="{{item.odstatus}}" data-id="{{index}}" bindtap="onBindTab">{{item.title}}</text>
+    </block>
+  </view>
+  <!-- 全部订单区域 -->
+  <view class="content_order_wrapper">
+    <block wx:for="{{orderList}}" wx:key="index">
+      <view class="content_wrapper">
+        <view class="content_top">
+          <text>{{item.time}}</text>
+          <text>{{item.status}}</text>
+        </view>
+        <view class="content_middle" bindtap="onBindDetail" data-id="{{item.id}}">
+          <view wx:for="{{item.courseInfo}}" wx:key="{{index}}">
+            <template is="orderList" data="{{courseList:item}}"></template>
+          </view>
+        </view>
+
+        <!-- 待支付和已完成列表下面是显示区分 -->
+        <view class="wait_pay_wrapper" wx:if="{{item.status =='待支付'}}">
+          <view class="money_group">
+            <text>总额:</text>
+            <text>¥{{item.price}}</text>
+          </view>
+          <view class="rest_time_wrapper">
+            <text>{{item.surtime}}</text>
+            <text bindtap='onBindPay' data-id="{{item.id}}">立即支付</text>
+          </view>
+        </view>
+        <!-- 已完成的部分 -->
+        <view wx:else class="content_footer">
+          <text>总额:</text>
+          <text>¥{{item.price}}</text>
+        </view>
+      </view>
+    </block>
+    <!-- 数据为空时显示提示信息 -->
+    <view wx:if="{{orderList.length<=0}}">
+      <template is="emptyClass" data="{{...searchEmptyObj}}"></template>
+    </view>
+  </view>
+</view>

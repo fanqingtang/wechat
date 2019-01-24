@@ -1,0 +1,37 @@
+<view class="container">
+  <view class="tip_group">
+    <text class="tip_text {{tipFlag?'tip_hide':''}}">{{tipTitle}}</text>
+  </view>
+  <view class="getPhoneNum_wrapper">
+    <input class="write_name" type="text" placeholder='真实姓名：2-5位中文' bindblur='onBindName'></input>
+    <view class="select_sex_group">
+      <text>性别</text>
+      <block wx:for="{{sex}}" wx:key="index">
+        <view class="girl_group {{sexIndex == index?'sexActive':''}}" data-id="{{index}}" bindtap='onBindSelectSex'>
+          <text>{{item}}</text>
+        </view>
+      </block>
+    </view>
+    <view class="getCode">
+      <text>年级</text>
+      <picker bindchange="bindChangeGrade" value="{{index}}" range="{{grade}}">
+        <view class="picker_group">
+          <text>{{grade[index]}}</text>
+          <image src="/images/register_page/arrow_right.png"></image>
+        </view>
+      </picker>
+    </view>
+    <view class="getCode">
+      <text>学校</text>
+      <view class="picker_group" bindtap='onBindSelectSchool'>
+        <text>{{schoolName}}</text>
+        <image src="/images/register_page/arrow_right.png"></image>
+      </view>
+    </view>
+  </view>
+  <button class="next_step" type="default" size="default"  bindtap='onBindRegister'>完成注册</button>
+  <view class="concat_wrapper">
+    <text>如有问题,请联系客服老师</text>
+    <text class="seatPhone">400-670-7210</text>
+  </view>
+</view>

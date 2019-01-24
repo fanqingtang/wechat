@@ -1,0 +1,65 @@
+<import src="./index_template/index_template.wxml" />
+
+<view class="container_wrapper {{loadingHide?'hideValue':''}}">
+  <view class="header_wrapper">
+    <view class="serach_group">
+      <image class="search_icon" src="/images/index/search.png"></image>
+      <input type="text" placeholder='课程名' placeholder-class='search_text' bindtap='searchPage' disabled="true"></input>
+    </view>
+    <view class="grade_group show_ellipsis" catchtap='selectGrade'>
+      <text class="header_grade show_ellipsis">{{grade}}</text>
+      <image class="down_arrow" src="{{arrow}}"></image>
+    </view>
+  </view>
+  <!-- 选择年级下拉列表start -->
+  <view class="grade_down_wrapper {{maskFlag?'hideValue':''}}">
+    <text class="all_grade {{gradeActive=='11'?'active_grade':''}}" bindtap="onBindMiddle" data-id='11'>{{allGrade}}</text>
+    <view class="middle_group">
+      <text class="middle">初中</text>
+      <view class="middle_stage">
+        <block wx:for="{{middleValue}}" wx:key="{{index}}">
+          <text class="{{index>=3?'margin_space':''}} {{gradeActive==index+7?'active_grade':''}}" bindtap="onBindMiddle" data-id="{{index+7}}">{{item}}</text>
+        </block>
+      </view>
+    </view>
+    <view class="middle_group">
+      <text class="middle">小学</text>
+      <view class="middle_stage">
+        <block wx:for="{{primaryValue}}" wx:key="{{index}}">
+          <text class="{{index>=3?'margin_space':''}} {{gradeActive==index+1?'active_grade':''}}" bindtap="onBindMiddle" data-id="{{index+1}}">{{item}}</text>
+        </block>
+      </view>
+    </view>
+  </view>
+  <!-- 选择年级下拉列表end -->
+
+  <view class="swiper_wrapper">
+    <swiper class="sowing_map_wrapper" indicator-dots='{{true}}' indicator-color='#ffffff' indicator-active-color='#FF7A32' autoplay='{{true}}' interval='3000' circular="{{true}}">
+      <block wx:for="{{swiper_map}}" wx:for-item="item" wx:for-index="idx" wx:key="idx">
+        <swiper-item>
+          <image src="{{item.img}}" mode="aspectFill" class="sowing_img" data-link="{{item.link}}" bindtap='onImgDetail'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="filter_course_wrapper">
+    <block wx:for="{{subjectArray}}" wx:key="{{index}}">
+      <text class="{{subject==index?'active_color':''}}" bindtap="onBindSubject" data-id="{{index}}">{{item}}</text>
+    </block>
+  </view>
+  <block wx:for="{{courseListArray}}" wx:for-item="item" wx:key="idx">
+    <view catchtap='getDetailPage' data-id="{{item.gid}}" data-type="{{item.type}}" class="course_list_box">
+      <template is="courseList" data="{{...item}}"></template>
+    </view>
+  </block>
+  <view class="separat_wrapper {{courseEmpty?'hideValue':''}}">
+    <text class="separat_line"></text>
+    <text class="course_text">已经到达底部</text>
+    <text class="separat_line"></text>
+  </view>
+
+  <view class="courseList_empty" wx:if="{{courseArray.length == 0}}">
+    "暂时没有，敬请期待"
+  </view>
+  <view class="{{!maskFlag?'mask_layout_wrapper':''}}" catchtouchmove="preventScroll" catchtap="onHideGrade"></view>
+</view>

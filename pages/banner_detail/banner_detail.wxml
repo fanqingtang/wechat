@@ -1,0 +1,29 @@
+<view class="container">
+  <text class="title">在家就能自主学习自主课程，遇到难题在线问老师的App。家长随时了解孩子动态，与孩子亲密互动，表扬鼓励的App。乐学一百——“一学就会，乐在其中”</text>
+  <view class="content_wrapper">
+    <text>【我们的课程】</text>
+    <view>1.同步课程：自学练习+乐问答疑=基础扎实。</view>
+    <view>2.培优课程：经典题型+思想方法+解题技巧=超越满分。</view>
+    <view>3.专题课程：小升初衔接、中考总复习、初升高衔接。</view>
+    <view>4.中考压轴：复习迎考，研究压轴，挑战满分！</view>
+  </view>
+  <view class="content_wrapper">
+    <text>【课程特色】</text>
+    <view>1.渐进掌握式学习：小步闯关，一学就会。</view>
+    <view>2.互动发现式学习：持续互动，乐在其中。</view>
+    <view>3.个别自适应学习：自定步调，体会乐趣。</view>
+    <view>4.礼品店丰富的礼品等你来兑换。</view>
+  </view>
+
+  <view class="content_wrapper">
+    <text>【公司简介】</text>
+    <view>乐学一百是专注于中小学在线学习的教育网站。</view>
+    <view>在乐学一百，我们相信，发掘和开发每一个孩子身上的学习潜能是所有家长和教育者的共同责任！</view>
+    <view>在研究总结近15年多媒体软件及混合式教学实践的基础上，整合全球范围内在线教育研究，乐学一百研发团队从以学生为中心的教育哲学出发，以学定教，提炼出了适应中小学生在线学习的3I教学法。</view>
+  </view>
+  <view class="content_wrapper">
+    <text>【欢迎联系我们】</text>
+    <view>咨询电话：400-670-7210（在线时间：09:00——21:00）</view>
+  </view>
+
+</view>

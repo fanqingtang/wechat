@@ -1,0 +1,251 @@
+page {
+  background-color: #f3f3f3;
+}
+
+/* 头部添加收货地址css start */
+
+.header_wrapper {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  height: 200rpx;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-top: 1rpx solid #e5e5e5;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.header_wrapper>image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+
+.header_wrapper>text {
+  font-family: "PingFang-SC";
+  font-size: 30rpx;
+  color: #333;
+}
+
+/* 添加收货地址css end */
+
+/* 添加收货地址之后的css start */
+
+.address_wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #fff;
+  border-top: 1rpx solid #e5e5e5;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.address_wrapper .address_group {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 30rpx 30rpx 20rpx;
+}
+
+.address_group .name_group {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  font-family: "PingFang-SC";
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+}
+
+.name_group>text:nth-of-type(1) {
+  width: 120rpx;
+  color: #999;
+  margin-right: 10rpx;
+  text-align: justify;
+  text-align-last: justify;
+}
+
+.name_group>text:nth-of-type(2) {
+  width: 560rpx;
+  color: #333;
+}
+
+.address_wrapper .editor_wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  border-top: 1rpx solid #e5e5e5;
+  height: 77rpx;
+  align-items: center;
+  padding: 0rpx 30rpx;
+  justify-content: flex-end;
+}
+.editor_wrapper .editor_group{
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  height:80rpx;
+  width:100rpx;
+}
+.editor_group>image {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 6rpx;
+}
+
+.editor_group>text {
+  font-family: "PingFangSC";
+  font-size: 26rpx;
+  color: #333;
+}
+
+/* 添加收货地址之后的css end */
+
+/* 付款成功后课程列表css start */
+
+.content_wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 282rpx;
+  background-color: #fff;
+  margin-top: 32rpx;
+  border-top: 1rpx solid #e5e5e5;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.content_wrapper>text {
+  display: inline-flex;
+  align-items: center;
+  height: 100rpx;
+  padding: 0rpx 188rpx 0rpx 30rpx;
+  font-family: "PingFang-SC";
+  font-size: 28rpx;
+  color: #999;
+}
+
+.content_wrapper .course_wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 140rpx;
+  align-items: center;
+  background-color: #f8f8f8;
+}
+
+.course_wrapper>image {
+  width: 100rpx;
+  height: 100rpx;
+  padding-left: 30rpx;
+  margin-right: 20rpx;
+}
+
+.content_wrapper .course_group {
+  display: flex;
+  flex-flow: column nowrap;
+  padding-right: 30rpx;
+  height: 100rpx;
+}
+
+.course_group>text {
+  font-family: "PingFang-SC";
+  font-size: 24rpx;
+  color: #999;
+  width: 570rpx;
+  margin-top: 10rpx;
+}
+
+.course_group .title_group {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 570rpx;
+  font-family: "PingFang-SC";
+  font-size: 32rpx;
+  color: #333;
+}
+
+.title_group>text:nth-of-type(1) {
+  width: 400rpx;
+}
+
+.title_group>text:nth-of-type(2) {
+  width: 140rpx;
+  text-align: right;
+}
+
+/* 付款成功后课程列表css end */
+
+/* 配送方式和快递免邮css start */
+
+.delivery_wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 0rpx 30rpx;
+  height: 100rpx;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  margin-top: 30rpx;
+  border-top: 1rpx solid #e5e5e5;
+  border-bottom: 1rpx solid #e5e5e5;
+  font-family: "PingFangSC";
+  font-size: 32rpx;
+}
+
+.delivery_wrapper>text:nth-of-type(1) {
+  color: #333;
+}
+
+.delivery_wrapper>text:nth-of-type(2) {
+  color: #666;
+}
+
+/* 配送方式和快递免邮css end */
+
+/* 立即支付css start */
+
+.pay_wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 100rpx;
+  width: 750rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #e5e5e5;
+  border-bottom: 1rpx solid #e5e5e5;
+  position: fixed;
+  bottom: 0;
+}
+
+.pay_wrapper>text:nth-of-type(1) {
+  display: inline-flex;
+  width: 440rpx;
+  padding: 0rpx 30rpx;
+  box-sizing: border-box;
+  align-items: center;
+  font-family: "SanFranciscoText";
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #ff7a32;
+}
+
+.pay_wrapper>text:nth-of-type(2) {
+  display: inline-flex;
+  width: 310rpx;
+  align-items: center;
+  justify-content: center;
+  font-family: "PingFang-SC";
+  font-size: 32rpx;
+  color: #fff;
+  background: #999;
+}
+
+.pay_wrapper>text.pay_active {
+  background: linear-gradient(45deg, rgba(255, 178, 97, 1) 0%, rgba(255, 122, 50, 1) 100%);
+}
+
+/* 立即支付css end */
+
+.show_ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hide_class{
+  display: none;
+}

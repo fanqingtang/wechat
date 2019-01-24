@@ -1,0 +1,62 @@
+<view class="container {{emptyFlag?'hide_class':''}}" >
+
+  <!-- 已经添加完收货地址之后 -->
+  <view class="address_wrapper" wx:if="{{addressFlag}}">
+    <view class="address_group">
+      <view class="name_group">
+        <text>收货人:</text>
+        <text class="show_ellipsis">{{addressInfo.name?addressInfo.name:'小乐'}}</text>
+      </view>
+      <view class="name_group">
+        <text>联系电话:</text>
+        <text class="show_ellipsis">{{addressInfo.phone?addressInfo.phone:'400-670-7210'}}</text>
+      </view>
+      <view class="name_group">
+        <text>收货地址:</text>
+        <text>{{addressInfo.province}}{{addressInfo.city?addressInfo.city:'北京市'}}{{addressInfo.countyName?addressInfo.countyName:'海淀区'}}{{addressInfo.address?addressInfo.address:'上地信息路甲28号'}}</text>
+      </view>
+    </view>
+    <view class="editor_wrapper">
+      <view class="editor_group" bindtap='onEditorAddress'>
+        <image src="/images/submit_order/editor.png"></image>
+        <text>编辑</text>
+      </view>
+    </view>
+
+  </view>
+
+
+  <!-- 添加收货地址 -->
+  <view wx:else class="header_wrapper">
+    <image src="/images/submit_order/add.png" bindtap='onAddAdress'></image>
+    <text>添加收货地址</text>
+  </view>
+
+
+
+  <!-- 付款成功后课程列表 -->
+  <view class="content_wrapper">
+    <text>付款成功后，系统立即为您开通以下课程：</text>
+    <view class="course_wrapper">
+      <image src="{{submitOrderList.picarr}}"></image>
+      <view class="course_group">
+        <view class="title_group">
+          <text class="show_ellipsis">{{submitOrderList.title}}</text>
+          <text class="show_ellipsis">¥{{submitOrderList.price}}</text>
+        </view>
+        <text class="show_ellipsis">{{submitOrderList.bvname}}  {{submitOrderList.cginame}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 配送方式和快递免邮 -->
+  <view class="delivery_wrapper">
+    <text>配送方式</text>
+    <text>快递免邮</text>
+  </view>
+
+  <!-- 立即支付 -->
+  <view class="pay_wrapper">
+    <text class="show_ellipsis">¥{{submitOrderList.price}}</text>
+    <text class="{{addressFlag?'pay_active':''}}" bindtap='onbindPay'>立即支付</text>
+  </view>
+</view>

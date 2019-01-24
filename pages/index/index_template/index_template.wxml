@@ -1,0 +1,23 @@
+<template name="courseList">
+  <view class="course_list_wrapper">
+    <view class="course_teacher">
+      <image mode="aspectFit" wx:if="{{type == 'zizhu'}}" src="{{picarr}}"></image>
+      <image mode="aspectFit" wx:else src="{{teapic}}"></image>
+      <text wx:if="{{type !='zizhu'}}">{{teaname}}</text>
+    </view>
+    <view class="course_info">
+      <text class="show_ellipsis">{{title}}</text>
+      <view class="course_time">
+        <text wx:if="{{type=='zizhu'}}" class="show_ellipsis">购买成功，即可开始学习</text>
+        <text wx:else class="show_ellipsis">{{stime}}开始</text>
+        <view class="course_box">
+          <text class="course_english show_ellipsis course_direct {{type=='zhibo'?'direct_c':''}} {{type=='zizhu'?'auto_c':''}} {{type=='gongkai'?'public_c':''}}">{{types}}</text>
+        </view>
+      </view>
+      <view class="course_evaluate">
+        <text wx:if="{{type == 'gongkai'}}" class="course_money">{{remark}}</text>
+        <text wx:else class="course_money">{{'¥'+price}}</text>
+      </view>
+    </view>
+  </view>
+</template>

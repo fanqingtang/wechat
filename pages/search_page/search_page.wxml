@@ -1,0 +1,48 @@
+
+<import src="../index/index_template/index_template.wxml" />
+<import src="./search_page_template/search_page_template.wxml"/>
+<view class="container">
+  <view class="header_wrapper">
+    <view class="search_wrapper">
+      <image class="search_icon" src="/images/index/search.png"></image>
+      <input class="search_bg" type="text" focus='true' value="{{inputValue}}" confirm-type='search' placeholder='搜索' placeholder-class='search_text' bindconfirm="onBindConfin" bindinput="onBindInput" bindfocus="onBindFocus"></input>
+      <view class="xImg_group" catchtap='onBindx' wx:if="{{inputValue}}">
+        <image class="x_img" src="/images/search_page/x.png"></image>
+      </view>
+    </view>
+    <text catchtap='onSearchTap'>搜索</text>
+  </view>
+  <!-- 历史搜索 -->
+  <view class="search_history_wrapper {{historyPage?'search_show_hide':''}}">
+    <view class="search_title_group">
+      <text class="search_history">历史搜索</text>
+      <image src="/images/search_page/delete.png" catchtap='onDeleteHistory' wx:if="{{history.length}}"></image>
+    </view>
+    <view class="search_pass_list" catchtap='onCatchHistory'>
+      <block wx:for="{{history}}" wx-item="item" wx-index="index" wx:key="index">
+        <text data-text="{{item}}">{{item}}</text>
+      </block>
+    </view>
+  </view>
+
+  <!--搜索列表显示  -->
+  <view class="search_content_wrapper {{courseListPage?'search_show_hide':''}}">
+    <block wx:for="{{courseList}}" wx:for-item="item" wx:key="idx">
+      <view catchtap='onCatchJumpDetail' data-id="{{item.gid}}" data-type="{{item.type}}" class="course_list_box">
+        <template is="courseList" data="{{...item}}"></template>
+      </view>
+    </block>
+  </view>
+
+  <view class="separat_wrapper {{loadDataFlag?'search_show_hide':''}}">
+    <text class="separat_line"></text>
+    <text class="course_text">已经到达底部</text>
+    <text class="separat_line"></text>
+  </view>
+  <!-- 未搜索到数据时显示 -->
+
+  <view class="{{searchEmpty?'search_show_hide':''}}">
+    <template is="emptyClass" data="{{...searchEmptyObj}}"></template>  
+  </view>
+
+</view>

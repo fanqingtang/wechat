@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="header_wrapper">
+    <text class="header_login">登录</text>
+    <text class="header_account">请输入乐学一百帐号登录</text>
+  </view>
+  <view class="phone_num_wrapper">
+    <input class="phone_num" type="text" placeholder='学号/手机号码' bindinput='onPhoneCode'></input>
+    <input class="phone_num" type="text" password = "true" placeholder='密码' bindinput='onPhonePassWord'></input>
+  </view>
+  <view class="login__wrapper">
+    <button class="btn_login" type="default" size="default" hover-class="none" bindtap='onBindLogin'>立即登录</button>
+  </view>
+  <text wx:if="{{!registerHide}}" class="AccountRegister" bindtap='onBindRegister'>账号注册</text>
+</view>

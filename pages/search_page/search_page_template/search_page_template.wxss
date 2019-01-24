@@ -1,0 +1,21 @@
+.search_null_wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-top: 378rpx;
+}
+
+.search_null_wrapper > image {
+  width: 240rpx;
+  height: 216rpx;
+}
+.search_null_wrapper > image.warnImg{
+  width: 240rpx;
+  height: 240rpx;
+}
+.search_null_wrapper > text {
+  font-family: "PingFang-SC";
+  font-size: 32rpx;
+  color: #999;
+  margin-top: 60rpx;
+}

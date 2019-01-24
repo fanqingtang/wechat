@@ -1,0 +1,91 @@
+
+.header_wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  border-top: 1rpx solid #e5e5e5;
+}
+
+.header_img {
+  width: 80rpx;
+  height: 80rpx;
+  padding-top: 60rpx;
+}
+
+.header_text {
+  font-family: "PingFangSC";
+  font-size: 40rpx;
+  color: #ff7a32;
+  margin: 30rpx 0rpx 60rpx;
+}
+
+.separat_wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 0rpx 30rpx;
+}
+
+.separat_line {
+  display: inline-block;
+  width: 240rpx;
+  height: 1rpx;
+  background-color: #e5e5e5;
+}
+
+.course_text {
+  font-family: "PingFang-SC";
+  font-size: 28rpx;
+  color: #999;
+  margin: 0rpx 48rpx;
+}
+
+.course_info_wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 0rpx 30rpx;
+  margin-top: 42rpx;
+  font-family: "PingFang-SC";
+  font-size: 26rpx;
+  color: #9b9b9b;
+}
+
+.query_course_wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  line-height: 56rpx;
+}
+
+.query_title {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.class_know_wrapper {
+  margin-top: 80rpx;
+}
+
+.course_btn_wrapper {
+  text-align: center;
+  margin-top: 60rpx;
+}
+
+.course_btn_wrapper button {
+  padding: 0;
+  margin: 0;
+  font-family: "PingFangSC";
+  font-size: 34rpx;
+  color: #ff7a32;
+  width: 320rpx;
+  height: 80rpx;
+  line-height: 78rpx;
+  background-color: #fff;
+  border: 2rpx solid #ff7a32; 
+}
+.course_btn_wrapper button::after{
+  border: none;
+}

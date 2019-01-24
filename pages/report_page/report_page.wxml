@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="header_wrapper">
+    <image class="header_img" src="/images/report_success/right.png"></image>
+    <text class="header_text">恭喜你报名成功</text>
+  </view>
+  <view class="separat_wrapper">
+    <text class="separat_line"></text>
+    <text class="course_text">上课说明</text>
+    <text class="separat_line"></text>
+  </view>
+  <view class="course_info_wrapper">
+    <view class="query_course_wrapper">
+      <text class="query_title">查询课程</text>
+      <text>小程序中：在“我的”-“我的订单”中查询课程</text>
+      <text>手机app：“学习”-“公开课/直播班/自主班”查询</text>
+    </view>
+    <view class="query_course_wrapper class_know_wrapper">
+      <text class="query_title">上课须知 </text>
+      <text>1. 登录乐学一百官网、下载手机app，使用购买课程的手机号登录即可。</text>
+      <text>2. 可使用电脑、pad、手机上课。</text>
+    </view>
+  </view>
+  <view class="course_btn_wrapper" catchtap='courseDetail'>
+      <button size="mini">我的课程</button>
+  </view>
+</view>

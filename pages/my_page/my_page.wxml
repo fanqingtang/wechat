@@ -1,0 +1,47 @@
+<view class="container" wx:if="{{isLogin}}">
+  <view class="header_wrapper">
+    <view class="header_user_know">
+      <text class="header_user" catchtap='onChangeUser'>切换用户</text>
+    </view>
+    <view class="user_info_wrapper">
+      <image class="header_img" mode="aspectFill" src="/images/my_page/default_head.png"></image>
+      <text>{{studentInfo.name}}</text>
+    </view>
+  </view>
+
+  <view class="content_wrapper">
+    <view class="order_group" bindtap='onBindTap'>
+      <view class="order_part_group">
+        <image src="/images/my_page/order.png"></image>
+        <text>我的订单</text>
+      </view>
+      <image src="/images/my_page/more.png"></image>
+    </view>
+    <view class="order_group coupon_group" bindtap='onBindCoupon'>
+      <view class="order_part_group">
+        <image src="/images/my_page/coupon.png"></image>
+        <text>我的优惠券</text>
+      </view>
+      <image src="/images/my_page/more.png"></image>
+    </view>
+  </view>
+  <view class="content_wrapper">
+    <view class="order_group coupon_group">
+      <view class="order_part_group">
+        <image src="/images/my_page/install.png"></image>
+        <text>设置</text>
+      </view>
+      <image src="/images/my_page/more.png"></image>
+    </view>
+    <view class="location_authorize">
+      <button open-type="openSetting">位置授权</button>
+    </view>
+  </view>
+
+</view>
+
+<view wx:else class="no_login_wrapper">
+  <image src="/images/my_page/student.png"></image>
+  <text>请先登录</text>
+  <button size="default" type="default" hover-class="none" bindtap='onLogin'>登录</button>
+</view>
